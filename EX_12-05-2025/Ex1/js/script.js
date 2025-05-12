@@ -9,7 +9,7 @@ function verificarNome() {
     let nomeEntrada = document.getElementById('entradaNome');
     if (nomeEntrada instanceof HTMLInputElement) {
         let nomeUsuario = nomeEntrada.value;
-        let expressaoRegular = /^[a-z-A-Z-ZÀ-ÿ-' ']+$/;
+        let expressaoRegular = /^[a-zA-Z-ZÀ-ÿ\s+]+$/;
         if(expressaoRegular.test(nomeUsuario)) {
             exibirMensagem("Nome válido: " + nomeUsuario, "green");
         }else {
